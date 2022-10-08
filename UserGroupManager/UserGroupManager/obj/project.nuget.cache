@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "77Xt1ZRFdmv1LQ1slurjNpH1+H60eQnbIUe+QlQUP3LeuQ9wEszoRQMYJ8uZn/tfYkoT6Q9u+78CcRWYRc9WBQ==",
+  "success": true,
+  "projectFilePath": "/Users/ooz/oozproject/net6-web-api-postgres/UserGroupManager/UserGroupManager/UserGroupManager.csproj",
+  "expectedPackageFiles": [
+    "/Users/ooz/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/ooz/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/ooz/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/ooz/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/ooz/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/ooz/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
