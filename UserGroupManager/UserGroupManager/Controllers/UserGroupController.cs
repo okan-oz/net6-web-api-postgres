@@ -27,8 +27,13 @@ namespace UserGroupManager.Controllers
         [HttpPost]
         public IActionResult Create(CRequest<UserGroupModel> model)
         {
-            _userGroupService.Create(model);
-            return Ok(new { message = "User created" });
+            CResponse<UserGroupModel> response = _userGroupService.Create(model);
+            if (response.IsSuccess)
+            {
+                return Ok(response);
+            }
+            return StatusCode(StatusCodes.Status500InternalServerError, response);
         }
     }
 }
+ 

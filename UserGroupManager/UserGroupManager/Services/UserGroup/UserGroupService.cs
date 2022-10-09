@@ -4,10 +4,11 @@ using Services;
 using UserGroupManager.Models;
 using UserGroupManager.Repository;
 using Microsoft.EntityFrameworkCore;
+using UserGroupManager.Entities;
 
 namespace UserGroupManager.Services.UserGroupService
 {
-    public class UserGroupService: IUserGroupService
+    public class UserGroupService : IUserGroupService
     {
         private DataContext _context;
         private readonly IMapper _mapper;
@@ -30,7 +31,7 @@ namespace UserGroupManager.Services.UserGroupService
             throw new NotImplementedException();
         }
 
-     
+
         public CResponse<bool> Delete(int id)
         {
             throw new NotImplementedException();
@@ -48,7 +49,41 @@ namespace UserGroupManager.Services.UserGroupService
 
         public CResponse<Models.UserGroupModel> Create(CRequest<Models.UserGroupModel> model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var userGroupEntity = _mapper.Map<UserGroupEntity>(model.Data);
+                userGroupEntity.Id = Guid.NewGuid().ToString();
+                userGroupEntity.CreatedTime = DateTime.Now;
+                userGroupEntity.CreatedBy = "CreatedBy todo";
+                _context.UserGroup.Add(userGroupEntity);
+                _context.SaveChanges();
+
+                return new CResponse<UserGroupModel>
+                {
+                    Data = model.Data,
+                    IsSuccess = true,
+                    RequestId = model.RequestId
+                };
+            }
+            catch (Exception ex)
+            {
+
+                return new CResponse<UserGroupModel>
+                {
+                    Data = model.Data,
+                    IsSuccess = false,
+                    RequestId = model.RequestId,
+                    Error = new Models.Base.Error
+                    {
+                        Exception = ex,
+                        ExceptionDescription = $"User Grup eklenirken hata oldu.Eklenmek istenen User Group ismi :{model.Data.Name}, hata detayı:{ex.Message}",
+                        ExceptionSource = "UserGroupService.Create",
+                        ShowVisibleMessage = true,
+                        VisibleMessage = "Beklenmedik bir hata oldu, daha sonra tekrar deneyiniz!"
+                    }
+                };
+            }
+
         }
 
         public CResponse<Models.UserGroupModel> Update(CRequest<Models.UserGroupModel> model)
@@ -58,4 +93,3 @@ namespace UserGroupManager.Services.UserGroupService
     }
 }
 
- 
