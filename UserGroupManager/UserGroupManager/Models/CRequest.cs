@@ -5,8 +5,9 @@ namespace UserGroupManager.Models
 {
     public class CRequest<T>:BaseRequest<T>
     {
-        public CRequest(T? data):base(data)
+        public CRequest(T data):base(data)
         {
+     
         }
     }
 }

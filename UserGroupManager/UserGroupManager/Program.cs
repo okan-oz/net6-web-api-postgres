@@ -1,9 +1,21 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Services;
+using UserGroupManager.Repository;
+using UserGroupManager.Services.UserGroupService;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var services = builder.Services;
+var env = builder.Environment;
 
+services.AddDbContext<DataContext>();
+services.AddCors();
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+services.AddScoped<IUserGroupService, UserGroupService>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -20,5 +32,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+app.Run("http://localhost:4000");
 

@@ -1,18 +1,23 @@
 ﻿using System;
+using AutoMapper;
+using Services;
 using UserGroupManager.Models;
+using UserGroupManager.Repository;
+using Microsoft.EntityFrameworkCore;
 
-namespace UserGroupManager.Services.UserGroup
+namespace UserGroupManager.Services.UserGroupService
 {
-    public class UserGroupService : IUserGroupService
+    public class UserGroupService: IUserGroupService
     {
-        public CResponse<UserGroupModel> Create(CRequest<UserGroupModel> model)
-        {
-            throw new NotImplementedException();
-        }
+        private DataContext _context;
+        private readonly IMapper _mapper;
 
-        public CResponse<bool> Delete(int id)
+        public UserGroupService(
+        DataContext context,
+        IMapper mapper)
         {
-            throw new NotImplementedException();
+            _context = context;
+            _mapper = mapper;
         }
 
         public CResponse<IEnumerable<UserGroupModel>> GetAll()
@@ -25,10 +30,32 @@ namespace UserGroupManager.Services.UserGroup
             throw new NotImplementedException();
         }
 
-        public CResponse<UserGroupModel> Update(CRequest<UserGroupModel> model)
+     
+        public CResponse<bool> Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        CResponse<IEnumerable<Models.UserGroupModel>> IService<Models.UserGroupModel>.GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        CResponse<Models.UserGroupModel> IService<Models.UserGroupModel>.GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public CResponse<Models.UserGroupModel> Create(CRequest<Models.UserGroupModel> model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public CResponse<Models.UserGroupModel> Update(CRequest<Models.UserGroupModel> model)
         {
             throw new NotImplementedException();
         }
     }
 }
 
+ 

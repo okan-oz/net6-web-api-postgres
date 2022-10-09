@@ -20,7 +20,10 @@ namespace UserGroupManager.Repository
             options.UseNpgsql(Configuration.GetConnectionString(AppSettingsConstants.MofiUserGroupDb));
         }
 
-        public DbSet<UserGroup> UserGroup { get; set; }
+        public DbSet<UserGroupEntity> UserGroup { get; set; }
+    
+        
+
     }
 }
 

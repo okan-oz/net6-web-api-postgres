@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/ooz/oozproject/net6-web-api-postgres/UserGroupManager/UserGroupManager/obj/.store/.stage/vop2fsyu.rlt</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/ooz/oozproject/net6-web-api-postgres/UserGroupManager/UserGroupManager/obj/.store/.stage/vop2fsyu.rlt</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">DotnetToolReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.3.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="/Users/ooz/oozproject/net6-web-api-postgres/UserGroupManager/UserGroupManager/obj/.store/.stage/vop2fsyu.rlt/" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Pkgdotnet-aspnet-codegenerator Condition=" '$(Pkgdotnet-aspnet-codegenerator)' == '' ">/Users/ooz/oozproject/net6-web-api-postgres/UserGroupManager/UserGroupManager/obj/.store/.stage/vop2fsyu.rlt/dotnet-aspnet-codegenerator/6.0.9</Pkgdotnet-aspnet-codegenerator>
+  </PropertyGroup>
+</Project>
