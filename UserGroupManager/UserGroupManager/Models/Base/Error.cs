@@ -1,9 +1,9 @@
 ﻿using System;
 namespace UserGroupManager.Models.Base
 {
-    public class Error
+    public class CError
     {
-        public Error()
+        public CError()
         {
         }
 

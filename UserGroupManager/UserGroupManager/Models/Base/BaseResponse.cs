@@ -10,7 +10,7 @@ namespace UserGroupManager.Models.Base
         public  T? Data { get; set; }
         public bool IsSuccess { get; set; } 
         public string RequestId { get; set; } = null!;
-        public Error? Error { get; set; }
+        public CError? Error { get; set; }
 
     }
 }

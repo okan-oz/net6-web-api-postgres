@@ -73,7 +73,7 @@ namespace UserGroupManager.Services.UserGroupService
                     Data = model.Data,
                     IsSuccess = false,
                     RequestId = model.RequestId,
-                    Error = new Models.Base.Error
+                    Error = new Models.Base.CError
                     {
                         Exception = ex,
                         ExceptionDescription = $"User Grup eklenirken hata oldu.Eklenmek istenen User Group ismi :{model.Data.Name}, hata detayı:{ex.Message}",
