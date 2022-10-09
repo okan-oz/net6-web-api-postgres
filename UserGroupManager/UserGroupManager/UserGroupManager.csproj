@@ -7,7 +7,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Helpers\" />
+    <None Remove="Models\" />
+    <None Remove="Services\" />
+    <None Remove="Services\UserGroup\" />
+    <None Remove="Services\UserGroupMember\" />
+    <None Remove="Entities\Base\" />
+    <None Remove="Models\Base\" />
+    <None Remove="Repository\" />
+    <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <None Remove="Helpers\Constants\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\UserGroup\" />
+    <Folder Include="Services\UserGroupMember\" />
+    <Folder Include="Entities\Base\" />
+    <Folder Include="Models\Base\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Helpers\Constants\" />
+  </ItemGroup>
 </Project>

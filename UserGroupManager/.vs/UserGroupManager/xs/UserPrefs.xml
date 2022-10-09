@@ -1,4 +1,38 @@
 ﻿<Properties StartupConfiguration="{387C95F3-5400-42CD-8BDA-CE644DACDBCE}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.UserGroupManager FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.UserGroupManager PreferredExecutionTarget="/Applications/Google Chrome.app" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserGroupManager/Models/Base/BaseRequest.cs">
+    <Files>
+      <File FileName="UserGroupManager/Entities/UserGroup.cs" Line="8" Column="42" />
+      <File FileName="UserGroupManager/Entities/IEntity.cs" Line="10" Column="6" />
+      <File FileName="UserGroupManager/Entities/Base/BaseEntity.cs" Line="4" Column="28" />
+      <File FileName="UserGroupManager/Entities/UserGroupMember.cs" Line="11" Column="47" />
+      <File FileName="UserGroupManager/Models/IModel.cs" Line="8" Column="2" />
+      <File FileName="UserGroupManager/Models/Base/BaseRequest.cs" Line="7" Column="28" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UserGroupManager" expanded="True">
+            <Node name="UserGroupManager" expanded="True">
+              <Node name="Entities" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Base" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
